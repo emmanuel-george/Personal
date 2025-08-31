@@ -182,55 +182,32 @@
             document.getElementById('contact-content').classList.add('hidden');
         }
 
-        // Event listener for About link
-        document.getElementById('about-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            hideAllContent();
-            document.getElementById('about-content').classList.remove('hidden');
-        });
+        // Add a single listener for all navigation links
+        document.querySelectorAll('nav a, #mobile-menu a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Stop the default link behavior
+                
+                const targetId = link.getAttribute('href').substring(1) + '-content';
+                
+                hideAllContent();
+                
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
 
-        // Event listener for Featured link
-        document.getElementById('featured-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            hideAllContent();
-            document.getElementById('featured-content').classList.remove('hidden');
-        });
-
-        // Event listener for Blog link
-        document.getElementById('blog-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            hideAllContent();
-            document.getElementById('blog-content').classList.remove('hidden');
-        });
-
-        // Event listener for Contact link
-        document.getElementById('contact-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            hideAllContent();
-            document.getElementById('contact-content').classList.remove('hidden');
-        });
-
-        // Event listener for Homepage (EG) link
-        document.querySelector('nav .text-xl').addEventListener('click', function(event) {
-            event.preventDefault();
-            hideAllContent();
-            document.getElementById('homepage-content').classList.remove('hidden');
+                // Close the mobile menu after a link is clicked
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
         });
 
         // Mobile menu functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // Hide mobile menu when a link is clicked
-        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                hideAllContent();
-                document.getElementById(link.id.replace('mobile-', '') + '-content').classList.remove('hidden');
-                document.getElementById('mobile-menu').classList.add('hidden');
-            });
         });
 
         // Set the initial state
