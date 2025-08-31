@@ -23,7 +23,7 @@
         <!-- Logo/Home -->
         <div class="flex items-center space-x-2">
             <!-- Replace with your logo image or text -->
-            <a href="#" class="text-xl font-bold tracking-tight">EG</a>
+            <a href="#" class="text-xl font-bold tracking-tight" id="eg-logo">EG</a>
         </div>
         
         <!-- Mobile Navigation Menu -->
@@ -191,9 +191,14 @@
                 
                 hideAllContent();
                 
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.classList.remove('hidden');
+                // Special case for the home link (EG logo)
+                if (link.id === 'eg-logo') {
+                    document.getElementById('homepage-content').classList.remove('hidden');
+                } else {
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.remove('hidden');
+                    }
                 }
 
                 // Close the mobile menu after a link is clicked
