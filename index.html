@@ -25,13 +25,22 @@
             <!-- Replace with your logo image or text -->
             <a href="#" class="text-xl font-bold tracking-tight">EG</a>
         </div>
-        <!-- Main Navigation Links -->
-        <div class="hidden md:flex space-x-6 text-sm">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Main Navigation Links - Initially hidden on mobile -->
+        <div id="main-nav" class="hidden md:flex space-x-6 text-sm">
             <a href="#about" id="about-link" class="hover:text-gray-400 transition-colors">about</a>
             <a href="#featured" id="featured-link" class="hover:text-gray-400 transition-colors">featured</a>
             <a href="#blog" id="blog-link" class="hover:text-gray-400 transition-colors">blog</a>
             <a href="#contact" id="contact-link" class="hover:text-gray-400 transition-colors">contact</a>
         </div>
+        
         <!-- Social Icons -->
         <div class="flex items-center space-x-4 text-white text-lg">
             <!-- Replace with your social media links and icons -->
@@ -40,6 +49,16 @@
             <a href="#" aria-label="LinkedIn" class="hover:text-gray-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </nav>
+    
+    <!-- Mobile Navigation Menu Content - Initially hidden -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 z-50 p-4 pt-20">
+        <div class="flex flex-col space-y-8 text-center text-white text-3xl">
+            <a href="#about" id="mobile-about-link" class="hover:text-gray-400 transition-colors">about</a>
+            <a href="#featured" id="mobile-featured-link" class="hover:text-gray-400 transition-colors">featured</a>
+            <a href="#blog" id="mobile-blog-link" class="hover:text-gray-400 transition-colors">blog</a>
+            <a href="#contact" id="mobile-contact-link" class="hover:text-gray-400 transition-colors">contact</a>
+        </div>
+    </div>
 
     <!-- Content Sections -->
     <div id="homepage-content" class="w-full mt-2">
@@ -196,6 +215,22 @@
             event.preventDefault();
             hideAllContent();
             document.getElementById('homepage-content').classList.remove('hidden');
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                hideAllContent();
+                document.getElementById(link.id.replace('mobile-', '') + '-content').classList.remove('hidden');
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
         });
 
         // Set the initial state
