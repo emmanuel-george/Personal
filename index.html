@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4 text-gray-300">
+
+    <!-- Top Navigation -->
+    <nav class="absolute top-0 left-0 w-full bg-gray-900 text-white p-4 flex items-center justify-between">
+        <!-- Logo/Home -->
+        <div class="flex items-center space-x-2">
+            <!-- Replace with your logo image or text -->
+            <a href="#" class="text-xl font-bold tracking-tight">EG</a>
+        </div>
+        <!-- Main Navigation Links -->
+        <div class="hidden md:flex space-x-6 text-sm">
+            <a href="#about" id="about-link" class="hover:text-gray-400 transition-colors">about</a>
+            <a href="#featured" id="featured-link" class="hover:text-gray-400 transition-colors">featured</a>
+            <a href="#blog" id="blog-link" class="hover:text-gray-400 transition-colors">blog</a>
+            <a href="#contact" id="contact-link" class="hover:text-gray-400 transition-colors">contact</a>
+        </div>
+        <!-- Social Icons -->
+        <div class="flex items-center space-x-4 text-white text-lg">
+            <!-- Replace with your social media links and icons -->
+            <a href="https://www.facebook.com/Emmanuel George" target="_blank" aria-label="Facebook" class="hover:text-gray-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/emmanuel.george01" target="_blank" aria-label="Instagram" class="hover:text-gray-400 transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-gray-400 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <div id="homepage-content" class="w-full mt-2">
+        <h1 class="text-3xl font-bold text-white text-center mb-12">Engineering the Future</h1>
+        
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+            <div class="flex-1 text-center md:text-right">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Software Engineer</h2>
+                <p class="mt-2 text-sm">Building scalable applications with a passion for beautiful and functional user experiences.</p>
+            </div>
+            
+            <img 
+                src="image_c912ba.jpg-5869b346-d1b0-4228-85cc-17a6c8e8c6dc" 
+                alt="A website layout showing a designer and a coder" 
+                class="rounded-xl shadow-md max-w-full h-auto w-96"
+                onerror="this.src='https://placehold.co/400x400/cccccc/333333?text=Image+Not+Found'"
+            >
+            
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">&lt;coder&gt;</h2>
+                <p class="mt-2 text-sm">Java/Android Developer who focuses on writing clean, elegant and efficient code.</p>
+            </div>
+        </div>
+        
+        <p class="mt-20 text-center italic">"Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make your paths straight." - Proverbs 3:5-6</p>
+    </div>
+
+    <!-- About Section - Initially hidden -->
+    <div id="about-content" class="hidden w-full mt-16 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">About Me</h1>
+        <p class="max-w-2xl mx-auto text-lg mb-6">
+            I am a Software Engineer with over 6 years of experience, originally from Karnataka, India. I am currently based in Raleigh, North Carolina, where I work for an IT company. I earned my Master's degree in Computer Science from Texas Tech University, and I specialize in building robust and scalable applications and remediating security threats and vulnerabilities across various platforms.
+        </p>
+        <h2 class="2xl font-bold text-white mb-2">Technologies</h2>
+        <div class="flex flex-wrap justify-center space-x-4 space-y-2 text-white">
+            <span class="bg-gray-700 rounded-md px-3 py-1">Java</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">JEE</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Android</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Kotlin</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Angular</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">JavaScript</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Python</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">SpringBoot</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Microservices</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Terraform</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">AWS</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Jenkins</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Kubernetes</span>
+            <span class="bg-gray-700 rounded-md px-3 py-1">Security Remediation</span>
+        </div>
+    </div>
+    
+    <!-- Featured Section - Initially hidden -->
+    <div id="featured-content" class="hidden w-full mt-8 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Featured App: Music Bay</h1>
+        <p class="max-w-2xl mx-auto text-lg mb-6">
+            Music Bay is an Android application I developed. It allows users to listen to their favorite music offline, create playlists, and manage their music library with an intuitive and clean user interface.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.george.tito.extrabat" target="_blank" class="block mx-auto max-w-2xl mt-8">
+            <img src="image_c821d9.jpg-37809b81-6248-46d7-b8c1-5f90e0f1df63" 
+                 alt="Screenshot of the Music Bay app on the Google Play Store" 
+                 class="rounded-xl shadow-md w-full h-auto">
+        </a>
+    </div>
+
+    <!-- Blog Section - Initially hidden -->
+    <div id="blog-content" class="hidden w-full mt-16 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Blog</h1>
+        <div class="max-w-2xl mx-auto space-y-8">
+            <!-- Example Blog Post 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-white">The Power of Microservices</h2>
+                <p class="mt-2 text-sm text-gray-400">Date: August 31, 2025</p>
+                <p class="mt-4 text-lg">
+                    In this post, I explore the advantages of microservices architecture in building scalable and resilient applications. We'll dive into how breaking down a monolithic application into smaller, independent services can lead to faster development cycles, easier maintenance, and improved fault tolerance.
+                </p>
+            </div>
+            <!-- Example Blog Post 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-white">My Journey to Android Development</h2>
+                <p class="mt-2 text-sm text-gray-400">Date: August 15, 2025</p>
+                <p class="mt-4 text-lg">
+                    I have extensive experience in Android development, with a strong background in both Java and Kotlin. My expertise extends to the entire application lifecycle, from initial design to deployment on app stores. I am passionate about creating intuitive and high-quality mobile experiences.
+                </p>
+            </div>
+            <!-- Example Blog Post 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-white">Threat Analysis and Secure Design</h2>
+                <p class="mt-2 text-sm text-gray-400">Date: September 5, 2025</p>
+                <p class="mt-4 text-lg">
+                    In today's digital landscape, security is paramount. This post explores the importance of threat analysis in identifying potential vulnerabilities early in the development process. I discuss how to integrate secure design principles into your workflow to build applications that are resilient against a wide range of cyber threats.
+                </p>
+            </div>
+             <!-- Example Blog Post 4 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-white">Remediating Vulnerabilities in Legacy Systems</h2>
+                <p class="mt-2 text-sm text-gray-400">Date: September 10, 2025</p>
+                <p class="mt-4 text-lg">
+                    Legacy systems often contain hidden security flaws that can be exploited by attackers. In this post, I share my experience and strategies for identifying and remediating these vulnerabilities. I will walk through a real-world example of how I successfully patched a critical security hole in a large-scale application.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section - Initially hidden -->
+    <div id="contact-content" class="hidden w-full mt-16 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Contact</h1>
+        <p class="max-w-2xl mx-auto text-lg mb-6">
+            Feel free to reach out to me via email at:
+        </p>
+        <a href="mailto:george.cv038@gmail.com" class="text-xl font-bold text-white hover:text-gray-400 transition-colors">george.cv038@gmail.com</a>
+    </div>
+
+    <script>
+        // Function to hide all content sections
+        function hideAllContent() {
+            document.getElementById('homepage-content').classList.add('hidden');
+            document.getElementById('about-content').classList.add('hidden');
+            document.getElementById('featured-content').classList.add('hidden');
+            document.getElementById('blog-content').classList.add('hidden');
+            document.getElementById('contact-content').classList.add('hidden');
+        }
+
+        // Event listener for About link
+        document.getElementById('about-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllContent();
+            document.getElementById('about-content').classList.remove('hidden');
+        });
+
+        // Event listener for Featured link
+        document.getElementById('featured-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllContent();
+            document.getElementById('featured-content').classList.remove('hidden');
+        });
+
+        // Event listener for Blog link
+        document.getElementById('blog-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllContent();
+            document.getElementById('blog-content').classList.remove('hidden');
+        });
+
+        // Event listener for Contact link
+        document.getElementById('contact-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllContent();
+            document.getElementById('contact-content').classList.remove('hidden');
+        });
+
+        // Event listener for Homepage (EG) link
+        document.querySelector('nav .text-xl').addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllContent();
+            document.getElementById('homepage-content').classList.remove('hidden');
+        });
+
+        // Set the initial state
+        hideAllContent();
+        document.getElementById('homepage-content').classList.remove('hidden');
+    </script>
+</body>
+</html>
